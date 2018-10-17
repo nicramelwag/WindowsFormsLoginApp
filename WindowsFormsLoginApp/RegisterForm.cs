@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace WindowsFormsLoginApp
 {
-    public partial class Form2 : Form
+    public partial class RegisterForm : Form
     {
-        public Form2()
+        public RegisterForm()
         {
             InitializeComponent();
         }
@@ -37,6 +37,56 @@ namespace WindowsFormsLoginApp
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgeTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsernameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SurnameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

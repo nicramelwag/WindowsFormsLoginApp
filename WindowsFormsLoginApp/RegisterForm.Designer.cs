@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsLoginApp
 {
-    partial class Form2
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -58,6 +59,7 @@
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Surname";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -67,6 +69,7 @@
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Username";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -76,6 +79,7 @@
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Password";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // NameTxt
             // 
@@ -83,6 +87,7 @@
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.Size = new System.Drawing.Size(100, 20);
             this.NameTxt.TabIndex = 4;
+            this.NameTxt.TextChanged += new System.EventHandler(this.NameTxt_TextChanged);
             // 
             // SurnameTxt
             // 
@@ -90,6 +95,7 @@
             this.SurnameTxt.Name = "SurnameTxt";
             this.SurnameTxt.Size = new System.Drawing.Size(100, 20);
             this.SurnameTxt.TabIndex = 5;
+            this.SurnameTxt.TextChanged += new System.EventHandler(this.SurnameTxt_TextChanged);
             // 
             // UsernameTxt
             // 
@@ -97,6 +103,7 @@
             this.UsernameTxt.Name = "UsernameTxt";
             this.UsernameTxt.Size = new System.Drawing.Size(100, 20);
             this.UsernameTxt.TabIndex = 6;
+            this.UsernameTxt.TextChanged += new System.EventHandler(this.UsernameTxt_TextChanged);
             // 
             // PasswordTxt
             // 
@@ -105,6 +112,7 @@
             this.PasswordTxt.PasswordChar = '*';
             this.PasswordTxt.Size = new System.Drawing.Size(100, 20);
             this.PasswordTxt.TabIndex = 7;
+            this.PasswordTxt.TextChanged += new System.EventHandler(this.PasswordTxt_TextChanged);
             // 
             // button1
             // 
@@ -124,6 +132,7 @@
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Age";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // AgeTxt
             // 
@@ -131,8 +140,9 @@
             this.AgeTxt.Name = "AgeTxt";
             this.AgeTxt.Size = new System.Drawing.Size(100, 20);
             this.AgeTxt.TabIndex = 10;
+            this.AgeTxt.TextChanged += new System.EventHandler(this.AgeTxt_TextChanged);
             // 
-            // Form2
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -148,7 +158,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "RegisterForm";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();

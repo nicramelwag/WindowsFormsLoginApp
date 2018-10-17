@@ -18,10 +18,13 @@ namespace WindowsFormsLoginApp
             InitializeComponent();
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
+                Person person = null;
                 string myConnection = "datasource=localhost;port=3306;username=root;pssword=;SslMode=none";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
 
@@ -33,13 +36,25 @@ namespace WindowsFormsLoginApp
                 int count = 0;
                 while (myReader.Read())
                 {
+                    int id = myReader.GetInt32("id");
+                    int age = myReader.GetInt32("age");
+                    String name = myReader.GetString("name");
+                    String surname = myReader.GetString("surname");
+                    String username = myReader.GetString("username");
+                    String password = myReader.GetString("password");
+
+                    person = new Person(id, age, name, surname, username, password);
+
+                    Console.WriteLine($"Zostal stoworzony obiekt typu person: {person}");
+      
                     count++;
                 }
+
                 if (count == 1)
                 {
                     this.Hide();
-                    Form2 f2 = new Form2();
-                    f2.ShowDialog();
+                    MainForm mainForm = new MainForm(person);
+                    mainForm.ShowDialog();
                 }
                 else
                     MessageBox.Show("Not correct usernme or password");
@@ -54,7 +69,7 @@ namespace WindowsFormsLoginApp
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 f2 = new Form2();
+            RegisterForm f2 = new RegisterForm();
             f2.ShowDialog();
         }
     }
