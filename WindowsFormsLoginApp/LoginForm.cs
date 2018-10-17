@@ -16,6 +16,7 @@ namespace WindowsFormsLoginApp
         public label()
         {
             InitializeComponent();
+            updateTime();
         }
 
 
@@ -71,6 +72,17 @@ namespace WindowsFormsLoginApp
             this.Hide();
             RegisterForm f2 = new RegisterForm();
             f2.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            updateTime();
+        }
+
+        private void updateTime()
+        {
+            DateTime dateTime = DateTime.Now;
+            TimeLabel.Text = dateTime.ToString();
         }
     }
 }
